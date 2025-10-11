@@ -187,6 +187,38 @@ export const taxonomy: Superorder[] = [
                 scientificName: "Xyloryctes jamaicensis",
                 commonName: "Rhinoceros Beetle",
                 id: "xyloryctes-jamaicensis"
+              },
+              {
+                scientificName: "Dynastes hercules",
+                commonName: "Hercules Beetle",
+                id: "dynastes-hercules"
+              },
+              {
+                scientificName: "Euphoria inda",
+                commonName: "Bumble Flower Beetle",
+                id: "euphoria-inda"
+              }
+            ]
+          },
+          {
+            name: "Cicindelidae",
+            id: "cicindelidae",
+            species: [
+              {
+                scientificName: "Cicindela sexguttata",
+                commonName: "Six-spotted Tiger Beetle",
+                id: "cicindela-sexguttata"
+              }
+            ]
+          },
+          {
+            name: "Cerambycidae",
+            id: "cerambycidae",
+            species: [
+              {
+                scientificName: "Leiopus nebulosus",
+                commonName: "Black-clouded Longhorn Beetle",
+                id: "leiopus-nebulosus"
               }
             ]
           }
@@ -242,6 +274,17 @@ export const taxonomy: Superorder[] = [
         id: "lepidoptera",
         families: [
           {
+            name: "Attevidae",
+            id: "attevidae",
+            species: [
+              {
+                scientificName: "Atteva aurea",
+                commonName: "Ailanthus Webworm Moth",
+                id: "atteva-aurea"
+              }
+            ]
+          },
+          {
             name: "Erebidae",
             id: "erebidae",
             species: [
@@ -293,6 +336,32 @@ export const taxonomy: Superorder[] = [
                 scientificName: "Junonia coenia",
                 commonName: "Common Buckeye",
                 id: "junonia-coenia"
+              },
+              {
+                scientificName: "Morpho helenor",
+                commonName: "Common Blue Morpho",
+                id: "morpho-helenor"
+              },
+              {
+                scientificName: "Vanessa virginiensis",
+                commonName: "American Painted Lady",
+                id: "vanessa-virginiensis"
+              },
+              {
+                scientificName: "Danaus plexippus",
+                commonName: "Monarch Butterfly",
+                id: "danaus-plexippus"
+              }
+            ]
+          },
+          {
+            name: "Uraniidae",
+            id: "uraniidae",
+            species: [
+              {
+                scientificName: "Chrysiridia rhipheus",
+                commonName: "Madagascan Sunset Moth",
+                id: "chrysiridia-rhipheus"
               }
             ]
           }
