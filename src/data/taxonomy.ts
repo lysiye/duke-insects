@@ -386,7 +386,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Promachus species",
                 commonName: "Giant Robber Fly",
-                id: "promachus-species"
+                id: "promachus-species",
+                images: ["P.species_1.jpg", "P.species_2.jpg", "P.species_3.jpg", "P.species_4.jpg"]
               }
             ]
           },
