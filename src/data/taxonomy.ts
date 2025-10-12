@@ -194,7 +194,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Dynastes hercules",
                 commonName: "Hercules Beetle",
-                id: "dynastes-hercules"
+                id: "dynastes-hercules",
+                images: ["d-hercules-1.jpg"]
               },
               {
                 scientificName: "Euphoria inda",
@@ -211,7 +212,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Cicindela sexguttata",
                 commonName: "Six-spotted Tiger Beetle",
-                id: "cicindela-sexguttata"
+                id: "cicindela-sexguttata",
+                images: ["c-sexguttata-1.jpg", "c-sexguttata-2.jpg"]
               }
             ]
           },
@@ -240,7 +242,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Forficula auricularia",
                 commonName: "European Earwig",
-                id: "forficula-auricularia"
+                id: "forficula-auricularia",
+                images: ["f-auricularia-1.jpg", "f-auricularia-2.jpg", "f-auricularia-3.jpg"]
               }
             ]
           }
@@ -405,7 +408,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Clogmia albipunctata",
                 commonName: "Filter Fly",
-                id: "clogmia-albipunctata"
+                id: "clogmia-albipunctata",
+                images: ["c-albipunctata-1.jpg", "c-albipunctata-2.jpg", "c-albipunctata-3.jpg", "c-albipunctata-4.jpg"]
               }
             ]
           }
