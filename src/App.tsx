@@ -12,23 +12,29 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename="/duke-insects">
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/order/:orderId" element={<OrderDetail />} />
-          <Route path="/species/:speciesId" element={<SpeciesDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  console.log("App component rendering");
+  console.log("Current location:", window.location.href);
+  console.log("Basename:", import.meta.env.PROD ? "/duke-insects" : "/");
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename={import.meta.env.PROD ? "/duke-insects" : "/"}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:orderId" element={<OrderDetail />} />
+            <Route path="/species/:speciesId" element={<SpeciesDetail />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
