@@ -3,9 +3,12 @@ import { taxonomy } from "@/data/taxonomy";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
 const SpeciesDetail = () => {
   const { speciesId } = useParams();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   let foundSpecies = null;
   let foundFamily = null;
@@ -75,13 +78,24 @@ const SpeciesDetail = () => {
                   {foundSpecies.images.map((image, index) => {
                     const imageSrc = new URL(`/src/assets/species/${image}`, import.meta.url).href;
                     return (
-                      <div key={index} className="rounded-lg overflow-hidden bg-muted aspect-square">
-                        <img 
-                          src={imageSrc} 
-                          alt={`${foundSpecies.scientificName} - view ${index + 1}`}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
+                      <Dialog key={index}>
+                        <DialogTrigger asChild>
+                          <div className="rounded-lg overflow-hidden bg-muted aspect-square cursor-pointer hover:opacity-90 transition-opacity">
+                            <img 
+                              src={imageSrc} 
+                              alt={`${foundSpecies.scientificName} - view ${index + 1}`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-7xl w-full p-0 overflow-hidden">
+                          <img 
+                            src={imageSrc} 
+                            alt={`${foundSpecies.scientificName} - view ${index + 1}`}
+                            className="w-full h-auto max-h-[90vh] object-contain"
+                          />
+                        </DialogContent>
+                      </Dialog>
                     );
                   })}
                 </div>
