@@ -14,20 +14,12 @@ const Index = () => {
       <section className="container mx-auto px-6 py-20 animate-fade-in">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Discovering Campus Biodiversity
+            Capturing the Insect World of Duke University
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Duke University's campus is home to an extraordinary diversity of insects, 
-            representing dozens of families and orders. This comprehensive photographic 
-            collection documents the remarkable arthropod fauna found within our campus 
-            ecosystem, from delicate lacewings to formidable beetles.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Each specimen has been carefully photographed and catalogued, providing both 
-            scientific documentation and artistic appreciation of these often-overlooked 
-            creatures that share our environment. Many images include detailed macro 
-            photography and scanning electron microscopy (SEM) to reveal intricate 
-            structures invisible to the naked eye.
+            Duke University's campus is home to an extraordinary diversity of insects. 
+            On this website, you will find a collection of photographs of insects
+            captured in different locations on campus. 
           </p>
           <Link to="/orders">
             <Button size="lg" className="group">
