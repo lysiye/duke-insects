@@ -38,12 +38,14 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Orchelimum pulchellum",
                 commonName: "Handsome Meadow Katydid",
-                id: "orchelimum-pulchellum"
+                id: "orchelimum-pulchellum",
+                images: ["O.pulchellum_1.jpg", "O.pulchellum_2.jpg", "O.pulchellum_3.jpg", "O.pulchellum_4.jpg", "O.pulchellum_5.jpg", "O.pulchellum_6.jpg"]
               },
               {
                 scientificName: "Orchelimum concinnum",
                 commonName: "Stripe-faced Meadow Katydid",
-                id: "orchelimum-concinnum"
+                id: "orchelimum-concinnum",
+                images: ["O.concinnum_1.jpg", "O.concinnum_2.jpg", "O.concinnum_3.jpg"]
               }
             ]
           },
@@ -54,7 +56,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Tenodera aridifolia",
                 commonName: "Chinese Mantis",
-                id: "tenodera-aridifolia"
+                id: "tenodera-aridifolia",
+                images: ["T.aridifolia_1.jpg", "T.aridifolia_2.jpg", "T.aridifolia_3.jpg", "T.aridifolia_4.jpg"]
               }
             ]
           }
@@ -71,7 +74,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Alydus eurinus",
                 commonName: "Broad-headed Bug",
-                id: "alydus-eurinus"
+                id: "alydus-eurinus",
+                images: ["A.eurinus_1.jpg", "A.eurinus_2.jpg", "A.eurinus_3.jpg"]
               }
             ]
           },
@@ -82,7 +86,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Leptoglossus phyllopus",
                 commonName: "Eastern Leaf-footed Bug",
-                id: "leptoglossus-phyllopus"
+                id: "leptoglossus-phyllopus",
+                images: ["L.phyllopus_1.jpg", "L.phyllopus_2.jpg", "L.phyllopus_3.jpg", "L.phyllopus_4.jpg"]
               }
             ]
           },
@@ -93,7 +98,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Oncopeltus fasciatus",
                 commonName: "Large Milkweed Bug",
-                id: "oncopeltus-fasciatus"
+                id: "oncopeltus-fasciatus",
+                images: ["O.fasciatus_1.jpg", "O.fasciatus_2.jpg", "O.fasciatus_3.jpg"]
               }
             ]
           },
@@ -104,7 +110,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Euthyrhynchus floridanus",
                 commonName: "Florida Predatory Stink Bug",
-                id: "euthyrhynchus-floridanus"
+                id: "euthyrhynchus-floridanus",
+                images: ["E.floridanus_1.jpg"]
               }
             ]
           },
@@ -115,7 +122,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Pselliopus barberi",
                 commonName: "Orange Assassin Bug",
-                id: "pselliopus-barberi"
+                id: "pselliopus-barberi",
+                images: ["P.barberi_1.jpg", "P.barberi_2.jpg", "P.barberi_3.jpg"]
               }
             ]
           },
@@ -126,7 +134,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Oncometopia orbona",
                 commonName: "Broad-headed Sharpshooter",
-                id: "oncometopia-orbona"
+                id: "oncometopia-orbona",
+                images: ["O.orbona_1.jpg", "O.orbona_2.jpg", "O.orbona_3.jpg", "O.orbona_4.jpg", "O.orbona_5.jpg"]
               }
             ]
           },
@@ -137,7 +146,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Neotibicen lyricen",
                 commonName: "Lyric Cicada",
-                id: "neotibicen-lyricen"
+                id: "neotibicen-lyricen",
+                images: ["N.lyricen_1.jpg", "N.lyricen_2.jpg", "N.lyricen_3.jpg"]
               }
             ]
           }
@@ -159,7 +169,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Chrysopa rufilabris",
                 commonName: "Green Lacewing",
-                id: "chrysopa-rufilabris"
+                id: "chrysopa-rufilabris",
+                images: ["C.rufilabris_1.jpg", "C.rufilabris_2.jpg", "C.rufilabris_3.jpg", "C.rufilabris_4.jpg"]
               }
             ]
           }
@@ -260,7 +271,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Vespula maculifrons",
                 commonName: "Eastern Yellowjacket",
-                id: "vespula-maculifrons"
+                id: "vespula-maculifrons",
+                images: ["V.maculifrons_1.jpg", "V.maculifrons_2.jpg", "V.maculifrons_3.jpg"]
               }
             ]
           },
@@ -271,7 +283,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Solenopsis invicta",
                 commonName: "Red Imported Fire Ant",
-                id: "solenopsis-invicta"
+                id: "solenopsis-invicta",
+                images: ["S.invicta_1.jpg", "S.invicta_2.jpg"]
               }
             ]
           }
@@ -288,7 +301,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Atteva aurea",
                 commonName: "Ailanthus Webworm Moth",
-                id: "atteva-aurea"
+                id: "atteva-aurea",
+                images: ["A.aurea_1.jpg"]
               }
             ]
           },
@@ -299,7 +313,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Zale lunata",
                 commonName: "Lunate Zale Moth",
-                id: "zale-lunata"
+                id: "zale-lunata",
+                images: ["Z.lunata_1.jpg", "Z.lunata_2.jpg", "Z.lunata_3.jpg"]
               }
             ]
           },
@@ -310,7 +325,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Phoebis sennae",
                 commonName: "Cloudless Sulphur",
-                id: "phoebis-sennae"
+                id: "phoebis-sennae",
+                images: ["P.sennae_1.jpg", "P.sennae_2.jpg", "P.sennae_3.jpg", "P.sennae_4.jpg", "P.sennae_5.jpg"]
               }
             ]
           },
@@ -321,7 +337,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Acharia stimulea",
                 commonName: "Saddleback Caterpillar Moth",
-                id: "acharia-stimulea"
+                id: "acharia-stimulea",
+                images: ["A.stimulea_1.jpg", "A.stimulea_2.jpg", "A.stimulea_3.jpg", "A.stimulea_4.jpg"]
               }
             ]
           },
@@ -332,7 +349,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Calycopis cecrops",
                 commonName: "Red-banded Hairstreak",
-                id: "calycopis-cecrops"
+                id: "calycopis-cecrops",
+                images: ["C.cecrops_1.jpg", "C.cecrops_2.jpg", "C.cecrops_3.jpg"]
               }
             ]
           },
@@ -343,22 +361,26 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Junonia coenia",
                 commonName: "Common Buckeye",
-                id: "junonia-coenia"
+                id: "junonia-coenia",
+                images: ["J.coenia_1.jpg", "J.coenia_2.jpg", "J.coenia_3.jpg", "J.coenia_4.jpg", "J.coenia_5.jpg"]
               },
               {
                 scientificName: "Morpho helenor",
                 commonName: "Common Blue Morpho",
-                id: "morpho-helenor"
+                id: "morpho-helenor",
+                images: ["M.helenor_1.jpg"]
               },
               {
                 scientificName: "Vanessa virginiensis",
                 commonName: "American Painted Lady",
-                id: "vanessa-virginiensis"
+                id: "vanessa-virginiensis",
+                images: ["V.virginiensis_1.jpg"]
               },
               {
                 scientificName: "Danaus plexippus",
                 commonName: "Monarch Butterfly",
-                id: "danaus-plexippus"
+                id: "danaus-plexippus",
+                images: ["D.plexippus_1.jpg", "D.plexippus_2.jpg", "D.plexippus_3.jpg"]
               }
             ]
           },
@@ -369,7 +391,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Chrysiridia rhipheus",
                 commonName: "Madagascan Sunset Moth",
-                id: "chrysiridia-rhipheus"
+                id: "chrysiridia-rhipheus",
+                images: ["C.rhipheus_1.jpg"]
               }
             ]
           }
@@ -398,7 +421,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Taeniaptera trivittata",
                 commonName: "Stilt-legged Fly",
-                id: "taeniaptera-trivittata"
+                id: "taeniaptera-trivittata",
+                images: ["T.trivittata_1.jpg", "T.trivittata_2.jpg", "T.trivittata_3.jpg"]
               }
             ]
           },
