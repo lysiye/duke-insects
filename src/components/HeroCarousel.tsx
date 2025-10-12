@@ -1,14 +1,26 @@
 import { useState, useEffect } from "react";
-import heroMantis from "@/assets/hero-mantis.jpg";
-import heroButterfly from "@/assets/hero-butterfly.jpg";
-import heroBeetle from "@/assets/hero-beetle.jpg";
-import heroLacewing from "@/assets/hero-lacewing.jpg";
+import heroPaintedLady from "@/assets/hero-painted-lady.jpg";
+import heroLacewingEye from "@/assets/hero-lacewing-eye.jpg";
+import heroRobberFly from "@/assets/hero-robber-fly.jpg";
+import heroScales from "@/assets/hero-scales.jpg";
+import heroSunsetMoth from "@/assets/hero-sunset-moth.jpg";
+import heroMorpho from "@/assets/hero-morpho.jpg";
+import heroAssassinBug from "@/assets/hero-assassin-bug.jpg";
+import heroTigerBeetle from "@/assets/hero-tiger-beetle.jpg";
+import heroSaddleback from "@/assets/hero-saddleback.jpg";
+import heroMilkweedBug from "@/assets/hero-milkweed-bug.jpg";
 
 const images = [
-  { src: heroMantis, alt: "Chinese Mantis" },
-  { src: heroButterfly, alt: "Common Buckeye Butterfly" },
-  { src: heroBeetle, alt: "Rhinoceros Beetle" },
-  { src: heroLacewing, alt: "Green Lacewing" },
+  { src: heroPaintedLady, alt: "American Painted Lady Butterfly" },
+  { src: heroLacewingEye, alt: "Green Lacewing Eye Macro" },
+  { src: heroRobberFly, alt: "Giant Robber Fly" },
+  { src: heroScales, alt: "Butterfly Wing Scales Macro" },
+  { src: heroSunsetMoth, alt: "Madagascan Sunset Moth Wing Scales" },
+  { src: heroMorpho, alt: "Common Blue Morpho Butterfly" },
+  { src: heroAssassinBug, alt: "Orange Assassin Bug" },
+  { src: heroTigerBeetle, alt: "Six-spotted Tiger Beetle" },
+  { src: heroSaddleback, alt: "Saddleback Caterpillar" },
+  { src: heroMilkweedBug, alt: "Large Milkweed Bug" },
 ];
 
 export const HeroCarousel = () => {
