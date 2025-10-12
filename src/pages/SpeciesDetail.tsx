@@ -69,14 +69,38 @@ const SpeciesDetail = () => {
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
               Image Gallery
             </h2>
-            <div className="bg-muted rounded-lg h-96 flex items-center justify-center">
-              <p className="text-muted-foreground text-lg">
-                Upload your photographs of <em>{foundSpecies.scientificName}</em> to display them here
-              </p>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              This gallery will showcase multiple angles, macro photography, and SEM images when available.
-            </p>
+            {foundSpecies.images && foundSpecies.images.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {foundSpecies.images.map((image, index) => {
+                    const imageSrc = new URL(`/src/assets/species/${image}`, import.meta.url).href;
+                    return (
+                      <div key={index} className="rounded-lg overflow-hidden bg-muted aspect-square">
+                        <img 
+                          src={imageSrc} 
+                          alt={`${foundSpecies.scientificName} - view ${index + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Detailed macro photography showcasing multiple angles and features.
+                </p>
+              </>
+            ) : (
+              <>
+                <div className="bg-muted rounded-lg h-96 flex items-center justify-center">
+                  <p className="text-muted-foreground text-lg">
+                    Upload your photographs of <em>{foundSpecies.scientificName}</em> to display them here
+                  </p>
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  This gallery will showcase multiple angles, macro photography, and SEM images when available.
+                </p>
+              </>
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up">

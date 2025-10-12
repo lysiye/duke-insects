@@ -2,6 +2,7 @@ export interface Species {
   scientificName: string;
   commonName: string;
   id: string;
+  images?: string[];
 }
 
 export interface Family {
@@ -175,7 +176,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Odontotaenius disjunctus",
                 commonName: "Horned Passalus",
-                id: "odontotaenius-disjunctus"
+                id: "odontotaenius-disjunctus",
+                images: ["o-disjunctus-1.jpg", "o-disjunctus-2.jpg", "o-disjunctus-3.jpg"]
               }
             ]
           },
@@ -186,7 +188,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Xyloryctes jamaicensis",
                 commonName: "Rhinoceros Beetle",
-                id: "xyloryctes-jamaicensis"
+                id: "xyloryctes-jamaicensis",
+                images: ["x-jamaicensis-1.jpg", "x-jamaicensis-2.jpg", "x-jamaicensis-3.jpg"]
               },
               {
                 scientificName: "Dynastes hercules",
@@ -196,7 +199,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Euphoria inda",
                 commonName: "Bumble Flower Beetle",
-                id: "euphoria-inda"
+                id: "euphoria-inda",
+                images: ["e-inda-1.jpg"]
               }
             ]
           },
@@ -218,7 +222,8 @@ export const taxonomy: Superorder[] = [
               {
                 scientificName: "Leiopus nebulosus",
                 commonName: "Black-clouded Longhorn Beetle",
-                id: "leiopus-nebulosus"
+                id: "leiopus-nebulosus",
+                images: ["l-nebulosus-1.jpg"]
               }
             ]
           }
