@@ -4,9 +4,14 @@ import { useParams, Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const OrderDetail = () => {
   const { orderId } = useParams();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [orderId]);
   
   const order = taxonomy
     .flatMap(s => s.orders)
