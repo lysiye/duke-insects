@@ -85,9 +85,6 @@ const SpeciesDetail = () => {
                     );
                   })}
                 </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Detailed macro photography showcasing multiple angles and features.
-                </p>
               </>
             ) : (
               <>

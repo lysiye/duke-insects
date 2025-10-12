@@ -33,6 +33,14 @@ export const Navigation = () => {
           >
             Orders
           </Link>
+          <Link
+            to="/contact"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              isActive("/contact") ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </nav>

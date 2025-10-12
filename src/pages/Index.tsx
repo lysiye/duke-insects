@@ -1,5 +1,6 @@
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { Navigation } from "@/components/Navigation";
+import { SearchBar } from "@/components/SearchBar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,7 +12,11 @@ const Index = () => {
       
       <HeroCarousel />
       
-      <section className="container mx-auto px-6 py-20 animate-fade-in">
+      <section className="container mx-auto px-6 py-12 animate-fade-in">
+        <SearchBar />
+      </section>
+      
+      <section className="container mx-auto px-6 py-12 animate-fade-in">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Capturing the Insect World of Duke University
