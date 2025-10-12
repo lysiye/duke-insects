@@ -9,6 +9,9 @@ import heroAssassinBug from "@/assets/hero-assassin-bug.jpg";
 import heroTigerBeetle from "@/assets/hero-tiger-beetle.jpg";
 import heroSaddleback from "@/assets/hero-saddleback.jpg";
 import heroMilkweedBug from "@/assets/hero-milkweed-bug.jpg";
+import heroMantis from "@/assets/hero-mantis.jpg";
+import heroLeafFootedBug from "@/assets/hero-leaf-footed-bug.jpg";
+import heroYellowjacket from "@/assets/hero-yellowjacket.jpg";
 
 const images = [
   { src: heroPaintedLady, alt: "American Painted Lady Butterfly" },
@@ -21,6 +24,9 @@ const images = [
   { src: heroTigerBeetle, alt: "Six-spotted Tiger Beetle" },
   { src: heroSaddleback, alt: "Saddleback Caterpillar" },
   { src: heroMilkweedBug, alt: "Large Milkweed Bug" },
+  { src: heroMantis, alt: "Chinese Mantis" },
+  { src: heroLeafFootedBug, alt: "Eastern Leaf-footed Bug" },
+  { src: heroYellowjacket, alt: "Eastern Yellowjacket" },
 ];
 
 export const HeroCarousel = () => {
