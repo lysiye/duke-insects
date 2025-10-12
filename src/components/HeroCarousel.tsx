@@ -38,6 +38,19 @@ export const HeroCarousel = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+      } else if (event.key === "ArrowRight") {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {images.map((image, index) => (
