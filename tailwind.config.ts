@@ -101,7 +101,7 @@ export default {
         "slide-up": "slide-up 0.8s ease-out",
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'serif': ['Poppins', 'sans-serif'],
       },
     },
   },
