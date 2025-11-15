@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-import * as LucideIcons from "lucide-react";
 
 const OrderDetail = () => {
   const { orderId } = useParams();
@@ -45,9 +44,21 @@ const OrderDetail = () => {
 
         <div className="mb-12 animate-fade-in">
           <div className="flex items-center gap-4 mb-4">
-            {order.icon && (() => {
-              const IconComponent = LucideIcons[order.icon.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join('') as keyof typeof LucideIcons] as any;
-              return IconComponent ? <IconComponent className="h-12 w-12 text-primary" /> : null;
+            {(() => {
+              const firstSpecies = order.families[0]?.species[0];
+              if (firstSpecies?.images?.[0]) {
+                const imageSrc = new URL(`/src/assets/species/${firstSpecies.images[0]}`, import.meta.url).href;
+                return (
+                  <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                    <img 
+                      src={imageSrc} 
+                      alt={firstSpecies.commonName}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              }
+              return null;
             })()}
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground">
               {order.name}
@@ -76,9 +87,17 @@ const OrderDetail = () => {
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between mb-3">
                           <div className="flex items-start gap-3 flex-1">
-                            {species.icon && (() => {
-                              const IconComponent = LucideIcons[species.icon.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join('') as keyof typeof LucideIcons] as any;
-                              return IconComponent ? <IconComponent className="h-6 w-6 text-primary flex-shrink-0 mt-1" /> : null;
+                            {species.images?.[0] && (() => {
+                              const imageSrc = new URL(`/src/assets/species/${species.images[0]}`, import.meta.url).href;
+                              return (
+                                <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                                  <img 
+                                    src={imageSrc} 
+                                    alt={species.commonName}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                              );
                             })()}
                             <div className="flex-1">
                               <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
