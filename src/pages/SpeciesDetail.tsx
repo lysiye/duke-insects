@@ -68,6 +68,17 @@ const SpeciesDetail = () => {
             </p>
           </div>
 
+          {foundSpecies.description && (
+            <div className="bg-card rounded-lg p-8 mb-8 border border-border animate-slide-up">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                Description
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {foundSpecies.description}
+              </p>
+            </div>
+          )}
+
           <div className="bg-card rounded-lg p-8 mb-8 border border-border animate-slide-up">
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
               Image Gallery
