@@ -3,8 +3,6 @@ import heroPaintedLady from "@/assets/hero-painted-lady.jpg";
 import heroLacewingEye from "@/assets/hero-lacewing-eye.jpg";
 import heroRobberFly from "@/assets/hero-robber-fly.jpg";
 import heroScales from "@/assets/hero-scales.jpg";
-import heroSunsetMoth from "@/assets/hero-sunset-moth.jpg";
-import heroMorpho from "@/assets/hero-morpho.jpg";
 import heroAssassinBug from "@/assets/hero-assassin-bug.jpg";
 import heroTigerBeetle from "@/assets/hero-tiger-beetle.jpg";
 import heroSaddleback from "@/assets/hero-saddleback.jpg";
@@ -17,8 +15,6 @@ const images = [
   { src: heroLacewingEye, alt: "Green Lacewing Eye Macro" },
   { src: heroRobberFly, alt: "Giant Robber Fly" },
   { src: heroScales, alt: "Butterfly Wing Scales Macro" },
-  { src: heroSunsetMoth, alt: "Madagascan Sunset Moth Wing Scales" },
-  { src: heroMorpho, alt: "Common Blue Morpho Butterfly" },
   { src: heroAssassinBug, alt: "Orange Assassin Bug" },
   { src: heroTigerBeetle, alt: "Six-spotted Tiger Beetle" },
   { src: heroSaddleback, alt: "Saddleback Caterpillar" },
