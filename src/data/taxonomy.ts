@@ -365,12 +365,6 @@ export const taxonomy: Superorder[] = [
                 images: ["J.coenia_1.jpg", "J.coenia_2.jpg", "J.coenia_3.jpg", "J.coenia_4.jpg", "J.coenia_5.jpg"]
               },
               {
-                scientificName: "Morpho helenor",
-                commonName: "Common Blue Morpho",
-                id: "morpho-helenor",
-                images: ["M.helenor_1.jpg"]
-              },
-              {
                 scientificName: "Vanessa virginiensis",
                 commonName: "American Painted Lady",
                 id: "vanessa-virginiensis",
@@ -381,18 +375,6 @@ export const taxonomy: Superorder[] = [
                 commonName: "Monarch Butterfly",
                 id: "danaus-plexippus",
                 images: ["D.plexippus_1.jpg", "D.plexippus_2.jpg", "D.plexippus_3.jpg"]
-              }
-            ]
-          },
-          {
-            name: "Uraniidae",
-            id: "uraniidae",
-            species: [
-              {
-                scientificName: "Chrysiridia rhipheus",
-                commonName: "Madagascan Sunset Moth",
-                id: "chrysiridia-rhipheus",
-                images: ["C.rhipheus_1.jpg"]
               }
             ]
           }
