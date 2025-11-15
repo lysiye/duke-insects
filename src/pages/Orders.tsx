@@ -3,7 +3,6 @@ import { taxonomy } from "@/data/taxonomy";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import * as LucideIcons from "lucide-react";
 
 const Orders = () => {
   return (
@@ -37,9 +36,21 @@ const Orders = () => {
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-3">
-                          {order.icon && (() => {
-                            const IconComponent = LucideIcons[order.icon.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join('') as keyof typeof LucideIcons] as any;
-                            return IconComponent ? <IconComponent className="h-8 w-8 text-primary" /> : null;
+                          {(() => {
+                            const firstSpecies = order.families[0]?.species[0];
+                            if (firstSpecies?.images?.[0]) {
+                              const imageSrc = new URL(`/src/assets/species/${firstSpecies.images[0]}`, import.meta.url).href;
+                              return (
+                                <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                                  <img 
+                                    src={imageSrc} 
+                                    alt={firstSpecies.commonName}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                              );
+                            }
+                            return null;
                           })()}
                           <h3 className="font-serif text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
                             {order.name}
