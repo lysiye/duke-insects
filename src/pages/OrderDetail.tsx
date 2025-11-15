@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
+import * as LucideIcons from "lucide-react";
 
 const OrderDetail = () => {
   const { orderId } = useParams();
@@ -43,9 +44,15 @@ const OrderDetail = () => {
         </Link>
 
         <div className="mb-12 animate-fade-in">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-4">
-            {order.name}
-          </h1>
+          <div className="flex items-center gap-4 mb-4">
+            {order.icon && (() => {
+              const IconComponent = LucideIcons[order.icon.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join('') as keyof typeof LucideIcons] as any;
+              return IconComponent ? <IconComponent className="h-12 w-12 text-primary" /> : null;
+            })()}
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground">
+              {order.name}
+            </h1>
+          </div>
           <p className="text-lg text-muted-foreground">
             {order.families.length} families, {order.families.reduce((acc, f) => acc + f.species.length, 0)} species
           </p>
@@ -68,13 +75,19 @@ const OrderDetail = () => {
                     <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between mb-3">
-                          <div className="flex-1">
-                            <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                              <em>{species.scientificName}</em>
-                            </h3>
-                            <p className="text-sm text-muted-foreground">
-                              {species.commonName}
-                            </p>
+                          <div className="flex items-start gap-3 flex-1">
+                            {species.icon && (() => {
+                              const IconComponent = LucideIcons[species.icon.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join('') as keyof typeof LucideIcons] as any;
+                              return IconComponent ? <IconComponent className="h-6 w-6 text-primary flex-shrink-0 mt-1" /> : null;
+                            })()}
+                            <div className="flex-1">
+                              <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                                <em>{species.scientificName}</em>
+                              </h3>
+                              <p className="text-sm text-muted-foreground">
+                                {species.commonName}
+                              </p>
+                            </div>
                           </div>
                           <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 ml-2" />
                         </div>
