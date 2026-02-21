@@ -8,7 +8,7 @@ export const Navigation = () => {
   
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+      <div className="w-full px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
           <img src={dukeLogo} alt="Duke University" className="h-6 sm:h-8 transition-opacity group-hover:opacity-80" />
           <span className="font-serif text-base sm:text-xl font-semibold text-foreground hidden sm:inline">
