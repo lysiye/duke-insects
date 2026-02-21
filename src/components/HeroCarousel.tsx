@@ -61,15 +61,15 @@ export const HeroCarousel = () => {
             alt={image.alt}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-background/80" />
         </div>
       ))}
       
-      <div className="absolute bottom-20 left-0 right-0 z-10 text-center">
-        <h1 className="font-serif text-6xl md:text-7xl font-bold text-foreground mb-4">
+      <div className="absolute bottom-20 left-0 right-0 z-10 text-center px-4">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg mb-3 md:mb-4">
           The Insects of Duke
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 drop-shadow-md">
           A Campus Collection
         </p>
       </div>
