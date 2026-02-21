@@ -12,11 +12,11 @@ const Index = () => {
       
       <HeroCarousel />
       
-      <section className="container mx-auto px-6 py-12 animate-fade-in">
+      <section className="container mx-auto px-6 py-12">
         <SearchBar />
       </section>
       
-      <section className="container mx-auto px-6 py-12 animate-fade-in">
+      <section className="container mx-auto px-6 py-12">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Capturing the Insect World of Duke University
@@ -35,7 +35,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-16 animate-fade-in">
+      <section className="container mx-auto px-6 py-16">
         <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg p-8 md:p-12">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
             Explore the Incredible Insects Exhibit

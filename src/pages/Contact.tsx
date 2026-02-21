@@ -7,7 +7,7 @@ const Contact = () => {
       <Navigation />
       
       <main className="container mx-auto px-6 pt-28 pb-20">
-        <div className="max-w-3xl mx-auto animate-fade-in">
+        <div className="max-w-3xl mx-auto">
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-8">
             Contact Us
           </h1>

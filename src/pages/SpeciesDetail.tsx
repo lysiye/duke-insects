@@ -56,7 +56,7 @@ const SpeciesDetail = () => {
         </Link>
 
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-8">
             <div className="text-sm text-muted-foreground mb-2">
               Order: {foundOrder?.name} → Family: {foundFamily?.name}
             </div>
@@ -69,7 +69,7 @@ const SpeciesDetail = () => {
           </div>
 
           {foundSpecies.description && (
-            <div className="bg-card rounded-lg p-8 mb-8 border border-border animate-slide-up">
+            <div className="bg-card rounded-lg p-8 mb-8 border border-border">
               <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
                 Description
               </h2>
@@ -79,7 +79,7 @@ const SpeciesDetail = () => {
             </div>
           )}
 
-          <div className="bg-card rounded-lg p-8 mb-8 border border-border animate-slide-up">
+          <div className="bg-card rounded-lg p-8 mb-8 border border-border">
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
               Image Gallery
             </h2>
@@ -125,7 +125,7 @@ const SpeciesDetail = () => {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-card rounded-lg p-6 border border-border">
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                 Taxonomy

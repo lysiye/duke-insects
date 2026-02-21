@@ -42,7 +42,7 @@ const OrderDetail = () => {
           </Button>
         </Link>
 
-        <div className="mb-12 animate-fade-in">
+        <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             {(() => {
               const firstSpecies = order.families[0]?.species[0];
@@ -71,7 +71,7 @@ const OrderDetail = () => {
 
         <div className="space-y-12">
           {order.families.map((family) => (
-            <div key={family.id} className="animate-slide-up">
+            <div key={family.id}>
               <h2 className="font-serif text-3xl font-semibold text-primary mb-6">
                 Family: {family.name}
               </h2>
