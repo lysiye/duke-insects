@@ -2,13 +2,86 @@ import { Navigation } from "@/components/Navigation";
 import { taxonomy } from "@/data/taxonomy";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { useState, useEffect, useCallback } from "react";
+
+const ImageLightbox = ({
+  images,
+  speciesName,
+  selectedIndex,
+  onClose,
+  onNavigate,
+}: {
+  images: string[];
+  speciesName: string;
+  selectedIndex: number | null;
+  onClose: () => void;
+  onNavigate: (index: number) => void;
+}) => {
+  const goNext = useCallback(() => {
+    if (selectedIndex === null) return;
+    onNavigate((selectedIndex + 1) % images.length);
+  }, [selectedIndex, images.length, onNavigate]);
+
+  const goPrev = useCallback(() => {
+    if (selectedIndex === null) return;
+    onNavigate((selectedIndex - 1 + images.length) % images.length);
+  }, [selectedIndex, images.length, onNavigate]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+      if (e.key === "ArrowRight") goNext();
+      else if (e.key === "ArrowLeft") goPrev();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex, goNext, goPrev]);
+
+  if (selectedIndex === null) return null;
+
+  const imageSrc = new URL(`/src/assets/species/${images[selectedIndex]}`, import.meta.url).href;
+
+  return (
+    <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="max-w-fit w-auto p-0 overflow-hidden border-none bg-transparent shadow-none [&>button]:text-white [&>button]:drop-shadow-md">
+        <div className="relative">
+          <img
+            src={imageSrc}
+            alt={`${speciesName} - view ${selectedIndex + 1}`}
+            className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg"
+          />
+          {images.length > 1 && (
+            <>
+              <button
+                onClick={goPrev}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                onClick={goNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+                aria-label="Next image"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 text-white text-sm px-3 py-1 rounded-full">
+                {selectedIndex + 1} / {images.length}
+              </div>
+            </>
+          )}
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 const SpeciesDetail = () => {
   const { speciesId } = useParams();
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   
   let foundSpecies = null;
   let foundFamily = null;
@@ -89,27 +162,28 @@ const SpeciesDetail = () => {
                   {foundSpecies.images.map((image, index) => {
                     const imageSrc = new URL(`/src/assets/species/${image}`, import.meta.url).href;
                     return (
-                      <Dialog key={index}>
-                        <DialogTrigger asChild>
-                          <div className="rounded-lg overflow-hidden bg-muted aspect-square cursor-pointer hover:opacity-90 transition-opacity">
-                            <img 
-                              src={imageSrc} 
-                              alt={`${foundSpecies.scientificName} - view ${index + 1}`}
-                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                          </div>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-fit w-auto p-0 overflow-hidden border-none bg-transparent shadow-none [&>button]:text-white [&>button]:drop-shadow-md">
-                          <img 
-                            src={imageSrc} 
-                            alt={`${foundSpecies.scientificName} - view ${index + 1}`}
-                            className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg"
-                          />
-                        </DialogContent>
-                      </Dialog>
+                      <div
+                        key={index}
+                        onClick={() => setSelectedIndex(index)}
+                        className="rounded-lg overflow-hidden bg-muted aspect-square cursor-pointer hover:opacity-90 transition-opacity"
+                      >
+                        <img 
+                          src={imageSrc} 
+                          alt={`${foundSpecies.scientificName} - view ${index + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
                     );
                   })}
                 </div>
+
+                <ImageLightbox
+                  images={foundSpecies.images}
+                  speciesName={foundSpecies.scientificName}
+                  selectedIndex={selectedIndex}
+                  onClose={() => setSelectedIndex(null)}
+                  onNavigate={setSelectedIndex}
+                />
               </>
             ) : (
               <>
