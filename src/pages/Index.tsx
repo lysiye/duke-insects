@@ -16,12 +16,12 @@ const Index = () => {
         <SearchBar />
       </section>
       
-      <section className="container mx-auto px-6 py-12">
+      <section className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Capturing the Insect World of Duke University
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
             Duke University's campus is home to an extraordinary diversity of insects. 
             On this website, you will find a collection of photographs of insects
             captured in different locations on campus. 
@@ -35,12 +35,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg p-8 md:p-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+      <section className="container mx-auto px-4 sm:px-6 py-10 md:py-16">
+        <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg p-6 sm:p-8 md:p-12">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
             Explore the Incredible Insects Exhibit
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
             Check out the Incredible Insects exhibit displayed at The Jerry and Bruce Chappell Family Gallery of the Duke University Libraries!
           </p>
           <a 
