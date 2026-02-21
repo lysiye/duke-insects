@@ -6,6 +6,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState, useEffect, useCallback } from "react";
 
+// Image lightbox with arrow navigation
 const ImageLightbox = ({
   images,
   speciesName,
