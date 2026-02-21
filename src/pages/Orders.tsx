@@ -45,6 +45,7 @@ const Orders = () => {
                                   <img 
                                     src={imageSrc} 
                                     alt={firstSpecies.commonName}
+                                    loading="lazy"
                                     className="w-full h-full object-cover"
                                   />
                                 </div>
