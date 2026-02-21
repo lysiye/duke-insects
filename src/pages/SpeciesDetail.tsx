@@ -99,11 +99,11 @@ const SpeciesDetail = () => {
                             />
                           </div>
                         </DialogTrigger>
-                        <DialogContent className="max-w-7xl w-full p-0 overflow-hidden">
+                        <DialogContent className="max-w-fit w-auto p-0 overflow-hidden border-none bg-transparent shadow-none [&>button]:text-white [&>button]:drop-shadow-md">
                           <img 
                             src={imageSrc} 
                             alt={`${foundSpecies.scientificName} - view ${index + 1}`}
-                            className="w-full h-auto max-h-[90vh] object-contain"
+                            className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg"
                           />
                         </DialogContent>
                       </Dialog>
