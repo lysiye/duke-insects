@@ -53,6 +53,7 @@ const OrderDetail = () => {
                     <img 
                       src={imageSrc} 
                       alt={firstSpecies.commonName}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -91,11 +92,12 @@ const OrderDetail = () => {
                               const imageSrc = new URL(`/src/assets/species/${species.images[0]}`, import.meta.url).href;
                               return (
                                 <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
-                                  <img 
-                                    src={imageSrc} 
-                                    alt={species.commonName}
-                                    className="w-full h-full object-cover"
-                                  />
+                                <img 
+                                  src={imageSrc} 
+                                  alt={species.commonName}
+                                  loading="lazy"
+                                  className="w-full h-full object-cover"
+                                />
                                 </div>
                               );
                             })()}

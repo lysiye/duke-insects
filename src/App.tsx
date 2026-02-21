@@ -1,28 +1,23 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Orders from "./pages/Orders";
-import OrderDetail from "./pages/OrderDetail";
-import SpeciesDetail from "./pages/SpeciesDetail";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
 
-const queryClient = new QueryClient();
+const Index = lazy(() => import("./pages/Index"));
+const Orders = lazy(() => import("./pages/Orders"));
+const OrderDetail = lazy(() => import("./pages/OrderDetail"));
+const SpeciesDetail = lazy(() => import("./pages/SpeciesDetail"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
-  console.log("App component rendering");
-  console.log("Current location:", window.location.href);
-  console.log("Basename:", import.meta.env.PROD ? "/duke-insects" : "/");
-  
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter basename={import.meta.env.PROD ? "/duke-insects" : "/"}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter basename={import.meta.env.PROD ? "/duke-insects" : "/"}>
+        <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/orders" element={<Orders />} />
@@ -31,9 +26,9 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+        </Suspense>
+      </BrowserRouter>
+    </TooltipProvider>
   );
 };
 
