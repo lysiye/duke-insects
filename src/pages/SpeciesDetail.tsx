@@ -142,16 +142,6 @@ const SpeciesDetail = () => {
             </p>
           </div>
 
-          {foundSpecies.description && (
-            <div className="bg-card rounded-lg p-8 mb-8 border border-border">
-              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
-                Description
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {foundSpecies.description}
-              </p>
-            </div>
-          )}
 
           <div className="bg-card rounded-lg p-8 mb-8 border border-border">
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
@@ -224,12 +214,14 @@ const SpeciesDetail = () => {
               </dl>
             </div>
 
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                Common Name
-              </h3>
-              <p className="text-foreground">{foundSpecies.commonName}</p>
-            </div>
+            {foundSpecies.description && (
+              <div className="bg-card rounded-lg p-6 border border-border">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Description
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">{foundSpecies.description}</p>
+              </div>
+            )}
           </div>
         </div>
       </main>
