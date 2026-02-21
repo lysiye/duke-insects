@@ -10,7 +10,7 @@ const Orders = () => {
       <Navigation />
       
       <main className="container mx-auto px-6 pt-28 pb-20">
-        <div className="text-center mb-12 animate-fade-in">
+        <div className="text-center mb-12">
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-4">
             Taxonomic Orders
           </h1>
@@ -20,7 +20,7 @@ const Orders = () => {
         </div>
 
         {taxonomy.map((superorder, superIndex) => (
-          <div key={superIndex} className="mb-16 animate-slide-up" style={{ animationDelay: `${superIndex * 0.1}s` }}>
+          <div key={superIndex} className="mb-16" style={{ animationDelay: `${superIndex * 0.1}s` }}>
             <h2 className="font-serif text-3xl font-bold text-primary mb-8 border-b border-border pb-2">
               {superorder.name}
             </h2>

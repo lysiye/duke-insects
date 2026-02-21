@@ -65,7 +65,7 @@ export const HeroCarousel = () => {
         </div>
       ))}
       
-      <div className="absolute bottom-20 left-0 right-0 z-10 text-center animate-slide-up">
+      <div className="absolute bottom-20 left-0 right-0 z-10 text-center">
         <h1 className="font-serif text-6xl md:text-7xl font-bold text-foreground mb-4">
           The Insects of Duke
         </h1>
