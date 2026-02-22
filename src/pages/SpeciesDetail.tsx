@@ -223,6 +223,12 @@ const SpeciesDetail = () => {
               </div>
             )}
           </div>
+
+          {foundSpecies.credit && (
+            <div className="mt-8 text-sm text-muted-foreground">
+              <span className="font-medium text-foreground">Credit:</span> {foundSpecies.credit}
+            </div>
+          )}
         </div>
       </main>
 

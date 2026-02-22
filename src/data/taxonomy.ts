@@ -4,6 +4,7 @@ export interface Species {
   id: string;
   images?: string[];
   description?: string;
+  credit?: string;
 }
 
 export interface Family {
