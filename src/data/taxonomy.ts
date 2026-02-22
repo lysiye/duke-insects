@@ -81,7 +81,8 @@ export const taxonomy: Superorder[] = [
                 commonName: "Broad-headed Bug",
                 id: "alydus-eurinus",
                 images: ["A.eurinus_1.jpg", "A.eurinus_2.jpg", "A.eurinus_3.jpg"],
-                description: "A true bug with a characteristically broad head. Often found on various plants where it feeds on plant juices."
+                description: "A true bug with a characteristically broad head. Often found on various plants where it feeds on plant juices.",
+                credit: "Collected and photographed by John Smith, Duke University Department of Biology"
               }
             ]
           },
