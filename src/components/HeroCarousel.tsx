@@ -62,7 +62,7 @@ export const HeroCarousel = () => {
             loading={index === 0 ? "eager" : "lazy"}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/70" />
         </div>
       ))}
       
