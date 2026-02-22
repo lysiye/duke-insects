@@ -225,7 +225,7 @@ const SpeciesDetail = () => {
           </div>
 
           {foundSpecies.credit && (
-            <div className="mt-8 text-sm text-muted-foreground">
+            <div className="mt-8 ml-1 text-sm text-muted-foreground">
               <span className="font-medium text-foreground">Credit:</span> {foundSpecies.credit}
             </div>
           )}
